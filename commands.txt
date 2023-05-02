@@ -1,0 +1,17 @@
+curl -X POST \
+     -H 'Content-Type: application/json' \
+     -d '{"-1001868173087": "123456789", "text": "This is a test from curl", "disable_notification": true}' \
+     https://api.telegram.org/bot5995572046:AAFq6Gz2UUJOHBN7wrjNTo_U0upy1DrMe_g/sendMessage
+
+token: 5995572046:AAFq6Gz2UUJOHBN7wrjNTo_U0upy1DrMe_g
+chat id: -1001868173087
+
+curl https://api.telegram.org/bot5995572046:AAFq6Gz2UUJOHBN7wrjNTo_U0upy1DrMe_g/getUpdates
+https://api.telegram.org/bot5995572046:AAFq6Gz2UUJOHBN7wrjNTo_U0upy1DrMe_g/getUpdates # todo выполнить в браузере
+
+
+SET TOKEN_BOT=5995572046:AAFq6Gz2UUJOHBN7wrjNTo_U0upy1DrMe_g
+SET ID_CHAT=-1001868173087
+SET URL=https://api.telegram.org/bot%TOKEN_BOT%/sendMessage
+SET MESSAGE="Hello from my Windows"
+curl -v -X POST --silent --output /dev/null %URL% -d chat_id=%ID_CHAT% -d text=%MESSAGE%
